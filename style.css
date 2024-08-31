@@ -1,0 +1,217 @@
+/* Basic Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.header-content span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeSlideIn 1s ease forwards;
+}
+
+/* Smooth Animation */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered Delays for Each Letter */
+.header-content span:nth-child(1) { animation-delay: 0s; }
+.header-content span:nth-child(2) { animation-delay: 0.1s; }
+.header-content span:nth-child(3) { animation-delay: 0.2s; }
+.header-content span:nth-child(4) { animation-delay: 0.3s; }
+.header-content span:nth-child(5) { animation-delay: 0.4s; }
+.header-content span:nth-child(6) { animation-delay: 0.5s; }
+.header-content span:nth-child(7) { animation-delay: 0.6s; }
+.header-content span:nth-child(8) { animation-delay: 0.7s; }
+.header-content span:nth-child(9) { animation-delay: 0.8s; }
+.header-content span:nth-child(10) { animation-delay: 0.9s; }
+.header-content span:nth-child(11) { animation-delay: 1s; }
+.header-content span:nth-child(12) { animation-delay: 1.1s; }
+.header-content span:nth-child(13) { animation-delay: 1.2s; }
+.header-content span:nth-child(14) { animation-delay: 1.3s; }
+.header-content span:nth-child(15) { animation-delay: 1.4s; }
+
+/* Responsive Font Size */
+@media (max-width: 768px) {
+    .header-content {
+        font-size: 2.5rem;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+/* Navigation Styling */
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    background-color: #f5f7fa;
+}
+
+.content-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    background-color: #444;
+}
+
+/* Projects Section */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    width: 100%;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background-color: #444;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .skills-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .skill-card {
+        width: 45%;
+    }
+
+    .project-cards {
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 30%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+/* Social Links */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5rem; /* Adjust the icon size */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+}
+
+
+
+/* Resume Download Link */
+.resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fc2803;
+    color: rgb(14, 240, 228);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.resume-link:hover {
+    background: #f50505;
+}
